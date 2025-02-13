@@ -42,26 +42,9 @@ void Draw_solution(double x, double y) {
 void Draw_step(int step) {
     Draw_coord_system();
 
-    if (step == 0) {
-        // Initial system
-        Draw_equation(2, -3, 1, 1.0, 0.0, 0.0);
-        Draw_equation(3, 2, 21, 0.0, 0.0, 1.0);
-    } else if (step == 1) {
-        // After first elimination step
-        Draw_equation(2, -3, 1, 1.0, 0.0, 0.0);
-        Draw_equation(0, 13.0 / 2, 39.0 / 2, 0.0, 0.0, 1.0);
-    } else if (step == 2) {
-        // Normalize second row
-        Draw_equation(2, -3, 1, 1.0, 0.0, 0.0);
-        Draw_equation(0, 1, 3, 0.0, 0.0, 1.0);
-    } else if (step == 3) {
-        // Back substitution
-        Draw_equation(1, 0, 3, 1.0, 0.0, 0.0);
-        Draw_equation(0, 1, 3, 0.0, 0.0, 1.0);
-    } else if (step == 4) {
-        // Final solution
+
         Draw_solution(3, 5);
-    }
+
 }
 
 void init() {
